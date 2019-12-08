@@ -72,4 +72,6 @@ gulp.task("licenses", async function() {
     .pipe(gulp.dest("./", { overwrite: true }));
   return;
 });
-gulp.task('default', ['licenses'])
+gulp.task('default', gulp.series('licenses', function() { 
+  // default task code here
+}));
