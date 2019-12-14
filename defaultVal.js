@@ -1,3 +1,3 @@
-export const internalApi ="http://localhost:9000/";
+export const internalApi ="http://52.59.73.71/";
 
 module.exports = {internalApi};
