@@ -30,7 +30,7 @@ const axios = require('axios');
 
 
 const useStyles = makeStyles(styles);
-const internalApi ="http://localhost:9000/"
+const internalApi ="http://52.59.73.71/"
 
 export function LoginPageContainer(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");

@@ -19,7 +19,7 @@ import Warning from "@material-ui/icons/Warning";
 
 const useStyles = makeStyles(styles);
 const axios = require('axios');
-const internalApi ="http://localhost:9000/"
+const internalApi ="http://52.59.73.71/"
 let userName = localStorage.getItem("username") && localStorage.getItem("username") != "null" ? localStorage.getItem("username") :"Your Name"
 let userEmail = localStorage.getItem("email") && localStorage.getItem("email") != "null" ?  localStorage.getItem("email") : "Your Email";
 
