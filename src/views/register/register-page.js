@@ -27,7 +27,7 @@ const axios = require('axios');
 
 
 const useStyles = makeStyles(styles);
-const internalApi ="http://52.59.73.71/"
+const internalApi ="http://52.59.73.71/technoPoers-API/"
 
 
 export function RegisterPageContainer(props) {
