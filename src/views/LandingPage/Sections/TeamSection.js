@@ -87,7 +87,7 @@ export default function TeamSection() {
                 <img src={team3} alt="..." className={imageClasses}/>
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Mulad Jenner
+              Mulad Alqussar
                 <br />
                 <small className={classes.smallTitle}>Civil Engineer</small>
               </h4>
