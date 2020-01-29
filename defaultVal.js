@@ -1,3 +1,3 @@
-export const internalApi ="http://52.59.73.71/";
+export const internalApi ="https://apitechno-powers.com/";
 
 module.exports = {internalApi};
