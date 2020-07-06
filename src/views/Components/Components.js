@@ -38,13 +38,13 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Techno Powers"
+        brand='Techno Powers'
         rightLinks={<HeaderLinks />}
         fixed
-        color="transparent"
+        color='transparent'
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
@@ -76,7 +76,7 @@ export default function Components(props) {
         <SectionLogin />
         <GridItem md={12} className={classes.textCenter}>
           <Link to={"/login"} className={classes.link}>
-            <Button color="primary" size="lg" simple>
+            <Button color='primary' size='lg' simple>
               View Login Page
             </Button>
           </Link>

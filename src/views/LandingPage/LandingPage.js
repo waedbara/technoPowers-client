@@ -32,26 +32,28 @@ export default function LandingPage(props) {
   return (
     <div>
       <Header
-        color="transparent"
+        color='transparent'
         routes={dashboardRoutes}
-        brand="Techno Powers"
+        brand='Techno Powers'
         rightLinks={<HeaderLinks />}
-        fixed
+        absolute
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
       <Parallax filter image={require("assets/img/AR0035-pic3.jpg")}>
-      {/* <Parallax filter image={require("assets/img/templateWelcome2.jpg")}> */}
+        {/* <Parallax filter image={require("assets/img/templateWelcome2.jpg")}> */}
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Boost Your knowledge</h1> 
+              <h1 className={classes.title}>Boost Your knowledge</h1>
               <h4>
-              Techno Powers offers an advanced,  affordable high level training in the field of Design, Engineering,  IT/Software, Social Media, Marketing and Finance for graduates and undergraduates Students.
-              </h4> 
+                Techno Powers offers an advanced, affordable high level training
+                in the field of Design, Engineering, IT/Software, Social Media,
+                Marketing and Finance for graduates and undergraduates Students.
+              </h4>
               <br />
               {/* <Button
                 color="danger"
