@@ -37,7 +37,7 @@ export default function Footer(props) {
                 className={classes.block}
                 target='_blank'
               >
-                <span class='fa fa-location-arrow' aria-hidden='true'>
+                <span className='fa fa-location-arrow' aria-hidden='true'>
                   {""} Location - Ibn Khaldoun street Madaba
                 </span>
               </a>

@@ -22,20 +22,24 @@ import Warning from "@material-ui/icons/Warning";
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
-import {NotificationContainer, NotificationManager} from 'react-notifications';
-
+import {
+  NotificationContainer,
+  NotificationManager,
+} from "react-notifications";
+import FacebookComponent from "../../components/FacebookComponent.js";
 
 import image from "assets/img/REG.jpg";
-const axios = require('axios');
-
+const axios = require("axios");
 
 const useStyles = makeStyles(styles);
-const internalApi ="https://apitechno-powers.com/technoPoers-API/"
+const internalApi = "https://apitechno-powers.com/technoPoers-API/";
 
 export function LoginPageContainer(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
-  const [userInfo ,setUserInfo] = React.useState({ 
-    username: '', email: '',password : ''
+  const [userInfo, setUserInfo] = React.useState({
+    username: "",
+    email: "",
+    password: "",
   });
   setTimeout(function() {
     setCardAnimation("");
@@ -47,8 +51,8 @@ export function LoginPageContainer(props) {
     <div>
       <Header
         absolute
-        color="transparent"
-        brand="Techno Powers"
+        color='transparent'
+        brand='Techno Powers'
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -57,18 +61,18 @@ export function LoginPageContainer(props) {
         style={{
           backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
-          backgroundPosition: "top center"
+          backgroundPosition: "top center",
         }}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer justify='center'>
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
+                  <CardHeader color='primary' className={classes.cardHeader}>
                     <h4>Login</h4>
                     {/* <div className={classes.socialLine}> */}
-                      {/* <Button
+                    {/* <Button
                         justIcon
                         href="#pablo"
                         target="_blank"
@@ -96,6 +100,7 @@ export function LoginPageContainer(props) {
                         <i className={"fab fa-google-plus-g"} />
                       </Button>
                     </div> */}
+                    <FacebookComponent />
                   </CardHeader>
                   {/* <p className={classes.divider}>Or Be Classical</p> */}
                   <CardBody>
@@ -117,46 +122,52 @@ export function LoginPageContainer(props) {
                       onChange={(e) => setUserInfo({ username: e.target.value })}
                     /> */}
                     <CustomInput
-                      labelText="Email..."
-                      id="email"
+                      labelText='Email...'
+                      id='email'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "email",
                         endAdornment: (
-                          <InputAdornment position="end">
+                          <InputAdornment position='end'>
                             <Email className={classes.inputIconsColor} />
                           </InputAdornment>
-                        )
+                        ),
                       }}
-                      value = {userInfo.email}
+                      value={userInfo.email}
                       onChange={(e) => setUserInfo({ email: e.target.value })}
                     />
                     <CustomInput
-                      labelText="Password"
-                      id="pass"
+                      labelText='Password'
+                      id='pass'
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "password",
                         endAdornment: (
-                          <InputAdornment position="end">
+                          <InputAdornment position='end'>
                             <Icon className={classes.inputIconsColor}>
                               lock_outline
                             </Icon>
                           </InputAdornment>
                         ),
-                        autoComplete: "off"
+                        autoComplete: "off",
                       }}
-                      value = {userInfo.password}
-                      onChange={(e) => setUserInfo({ password: e.target.value })}
-
+                      value={userInfo.password}
+                      onChange={(e) =>
+                        setUserInfo({ password: e.target.value })
+                      }
                     />
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg" onClick ={() => props.handelSubmit()}>
+                    <Button
+                      simple
+                      color='primary'
+                      size='lg'
+                      onClick={() => props.handelSubmit()}
+                    >
                       Get started
                     </Button>
                   </CardFooter>
@@ -170,36 +181,48 @@ export function LoginPageContainer(props) {
     </div>
   );
 }
-class LoginPage extends  React.Component {
+class LoginPage extends React.Component {
   render() {
     return (
       <div>
-        <LoginPageContainer handelSubmit={this.handelSubmit}/>
-       <NotificationContainer />
+        <LoginPageContainer handelSubmit={this.handelSubmit} />
+        <NotificationContainer />
       </div>
-  
     );
   }
-   async handelSubmit(){
-    if(!(document.getElementById("pass").value &&  document.getElementById("email").value)){
-      return NotificationManager.warning('Please ,fill the required fields', '', 3000);
+  async handelSubmit() {
+    if (
+      !(
+        document.getElementById("pass").value &&
+        document.getElementById("email").value
+      )
+    ) {
+      return NotificationManager.warning(
+        "Please ,fill the required fields",
+        "",
+        3000
+      );
     }
     try {
       const response = await axios.post(`${internalApi}api/users/login`, {
-        "password": document.getElementById("pass").value,
-        "email": document.getElementById("email").value
+        password: document.getElementById("pass").value,
+        email: document.getElementById("email").value,
       });
       console.log(response);
-      if(response.data.status === 200){
+      if (response.data.status === 200) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.username);
         localStorage.setItem("email", response.data.email);
-        window.location.replace(window.location.origin)
-      }else{
-         NotificationManager.warning('Email or password is incorrect.', '', 3000);
+        window.location.replace(window.location.origin);
+      } else {
+        NotificationManager.warning(
+          "Email or password is incorrect.",
+          "",
+          3000
+        );
       }
     } catch (error) {
-      NotificationManager.warning('Email or password is incorrect.', '', 3000);
+      NotificationManager.warning("Email or password is incorrect.", "", 3000);
     }
   }
 }
