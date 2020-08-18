@@ -189,6 +189,44 @@ export default function TeamSection() {
               <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
                 <img
                   src={
+                    "https://techno-powers.s3.eu-central-1.amazonaws.com/4-htmlcss.jpg"
+                  }
+                  alt='...'
+                  className={imageClasses}
+                />
+              </GridItem>
+              <h4 className={classes.cardTitle}>
+                Arduino + IOT - 35 hours
+                <br />
+                {/* <small className={classes.smallTitle}>Model</small> */}
+              </h4>
+              <CardBody>
+                <p className={classes.description}>
+                  Arduino IoT Cloud is an application that helps makers build
+                  connected objects in a quick, easy and secure way. You can
+                  connect multiple devices to each other and allow them to
+                  exchange real-time data. You can also monitor them from
+                  anywhere using a simple user interface.
+                </p>
+              </CardBody>
+              <CardFooter className={classes.justifyCenter}>
+                {/* <Button
+                  justIcon
+                  color='transparent'
+                  className={classes.margin5}
+                  target='_blank'
+                  href='https://www.facebook.com/Technopowers.jo/photos/a.144019640322826/149827856408671/?type=3&theater'
+                >
+                  <i className={classes.socials + " fab fa-facebook"} />
+                </Button> */}
+              </CardFooter>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card plain>
+              <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <img
+                  src={
                     "https://techno-powers.s3.eu-central-1.amazonaws.com/jtSShzfu1rgoqGymS3usd5db.jpg"
                   }
                   alt='...'
@@ -262,7 +300,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Primavera P6
+                Primavera P6 - 20 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -294,7 +332,7 @@ export default function TeamSection() {
                 <img src={aPlus} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                A+
+                A+ - 30 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -398,7 +436,7 @@ export default function TeamSection() {
                 <img src={plc} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                PLC Siemens - 30 Hours
+                PLC Siemens - 30 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Designer</small> */}
               </h4>
@@ -429,7 +467,7 @@ export default function TeamSection() {
                 <img src={pvc} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                PV System Design - 30 Hours and 3 projects
+                PV System Design - 30 hours and 3 projects
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -466,7 +504,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                HVAC Course - 30 Hours
+                HVAC Course - 30 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -503,7 +541,7 @@ export default function TeamSection() {
                 <img src={matlab} alt='...' className={imageClasses} />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                MATLAB - 30 Hours
+                MATLAB - 30 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -540,7 +578,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                ETABS + SAFE - 45 Hours
+                ETABS + SAFE - 45 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -580,7 +618,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Adobe Photoshop - 15 Hours
+                Adobe Photoshop - 15 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -618,7 +656,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Adobe Illustrator - 15 Hours
+                Adobe Illustrator - 15 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -657,7 +695,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                After Effect - 15 Hours
+                After Effect - 15 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
@@ -695,7 +733,7 @@ export default function TeamSection() {
                 />
               </GridItem>
               <h4 className={classes.cardTitle}>
-                Excel Course - 10 Hours
+                Excel Course - 10 hours
                 <br />
                 {/* <small className={classes.smallTitle}>Model</small> */}
               </h4>
