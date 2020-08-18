@@ -8,7 +8,7 @@ import {
 } from "react-notifications";
 
 const axios = require("axios");
-const internalApi = "https://apitechno-powers.com/technoPoers-API/";
+const internalApi = "http:/localhost:8080/";
 
 const responseFacebook = async (response) => {
   try {
