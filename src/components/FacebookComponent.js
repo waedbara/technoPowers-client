@@ -48,6 +48,8 @@ export default class FacebookComponent extends Component {
           fields='name,email,picture'
           // icon='fa-facebook'
           // icon='fa-facebook-square'
+          isMobile={true}
+          redirectUri={window.location.replace(window.location.origin)}
           // cssClass='fb-login-button'
           callback={responseFacebook}
         />
