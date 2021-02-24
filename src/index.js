@@ -12,6 +12,7 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import Register from "views/register/register-page.js";
 import Courses from "views/Courses/CoursesPage.js";
+import RequestCourse from "views/LandingPage/Sections/WorkSection.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/register" component={Register} />
       <Route path="/login" component={LoginPage} />
       <Route path="/courses" component={Courses} />
+      <Route path="/request" component={RequestCourse} />
       <Route path="/" component={LandingPage} />
       <Route path="/comp" component={Components} />
     </Switch>

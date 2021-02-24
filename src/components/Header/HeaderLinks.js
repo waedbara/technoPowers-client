@@ -66,8 +66,22 @@ export default function HeaderLinks(props) {
                  className={classes.navLink}
                  onClick = {logout}
                  >
-             Logout
-           </Button>
+              Logout
+            </Button>
+           <Button
+                  href={"/courses"} 
+                  color="transparent"
+                  className={classes.navLink}
+                 >
+                   Courses
+                 </Button>
+            <Button
+                  href={"/request"} 
+                  color="transparent"
+                  className={classes.navLink}
+                 >
+                   Request A Course
+            </Button>
            </div> 
           ):(<div>
             <Button
@@ -84,7 +98,21 @@ export default function HeaderLinks(props) {
           >
            Login
           </Button>
-            </div>)
+          <Button
+               href={"/courses"} 
+               color="transparent"
+               className={classes.navLink}
+                 >
+                   Courses
+          </Button>
+          <Button
+               href={"/request"} 
+               color="transparent"
+               className={classes.navLink}
+                 >
+                   Request A Course
+          </Button>
+         </div>)
          }
         <i className={classes.registerNavLink} />
       </ListItem>

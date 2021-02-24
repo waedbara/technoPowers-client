@@ -4,8 +4,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -27,7 +25,6 @@ import matlab from "assets/img/courses/matlab.jpg";
 import plc from "assets/img/courses/plc.jpg";
 import pvc from "assets/img/courses/pvc.jpg";
 import qser from "assets/img/courses/qser.jpg";
-import image from "assets/img/REG.jpg";
 
 const englishCourse =
   "https://techno-powers.s3.eu-central-1.amazonaws.com/106858588_23845260836350444_7428167036579413183_n.jpg";
@@ -61,7 +58,15 @@ export function CoursesSection() {
       />
     <Parallax filter small image={require("assets/img/AR0035-pic3.jpg")}>
     </Parallax>
-    <div className={classNames(classes.main, classes.mainRaised)}>
+    <div style={{
+       zIndex: '3',
+       position: 'relative',
+       background: '#FFFFFF',
+       margin: "-60px 30px 0px",
+       borderRadius: "6px",
+       boxShadow:
+         "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+        }}>
         <div className={classes.section}>
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
