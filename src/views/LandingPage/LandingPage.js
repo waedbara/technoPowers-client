@@ -11,7 +11,6 @@ import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
@@ -72,11 +71,12 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-        <PartnerSection />
+          <PartnerSection />
           <ServiceSection />
-          <ProductSection />
+          {/* <ProductSection /> */}
+          {/* <WorkSection /> */}
           <TeamSection />
-          <WorkSection />
+
         </div>
       </div>
       <Footer />

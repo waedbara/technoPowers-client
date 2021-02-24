@@ -2,9 +2,6 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-
-// core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
@@ -18,10 +15,15 @@ import {
 import "react-notifications/lib/notifications.css";
 
 import Warning from "@material-ui/icons/Warning";
+import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import Parallax from "components/Parallax/Parallax.js";
+import Footer from "components/Footer/Footer.js";
 
 const useStyles = makeStyles(styles);
 const axios = require("axios");
 const internalApi = "https://apitechno-powers.com/technoPoers-API";
+const dashboardRoutes = [];
 let userName =
   localStorage.getItem("username") && localStorage.getItem("username") != "null"
     ? localStorage.getItem("username")
@@ -31,66 +33,92 @@ let userEmail =
     ? localStorage.getItem("email")
     : "Your Email";
 
-export function WorkSectionContainer(props) {
+export function RequestCourseContainer(props) {
   const classes = useStyles();
   return (
-    <div className={classes.section}>
-      <GridContainer justify='center'>
-        <GridItem cs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Request a course</h2>
-          <h4 className={classes.description}>
-            We would love to hear from you. Simply complete the form below or
-            email our team at Techno2powers@gmail.com
-          </h4>
-          <form>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
-                <CustomInput
-                  labelText={userName}
-                  id='name'
-                  formControlProps={{
-                    fullWidth: true,
-                  }}
-                />
-              </GridItem>
-              <GridItem xs={12} sm={12} md={6}>
-                <CustomInput
-                  labelText={userEmail}
-                  id='email'
-                  formControlProps={{
-                    fullWidth: true,
-                  }}
-                />
-              </GridItem>
-              <CustomInput
-                labelText='Your Message'
-                id='message'
-                formControlProps={{
-                  fullWidth: true,
-                  className: classes.textArea,
-                }}
-                inputProps={{
-                  multiline: true,
-                  rows: 5,
-                }}
-              />
-              <NotificationContainer />
-              <GridContainer justify='center'>
-                <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
-                  {/* {showWarningMsg ? (<p>Please fill in the required fields</p>) : (null)} */}
-                  <Button color='primary' onClick={() => props.handelSubmit()}>
-                    Send
-                  </Button>
+    <div>
+      <Header
+       color='transparent'
+       routes={dashboardRoutes}
+       brand='Techno Powers'
+       rightLinks={<HeaderLinks />}
+       absolute
+       changeColorOnScroll={{
+         height: 400,
+         color: "white",
+       }}
+      />
+    <Parallax filter small image={require("assets/img/AR0035-pic3.jpg")}>
+    </Parallax>
+    <div style={{
+       zIndex: '3',
+       position: 'relative',
+       background: '#FFFFFF',
+       margin: "-60px 30px 0px",
+       borderRadius: "6px",
+       boxShadow:
+         "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+        }}>
+      <div className={classes.section}>
+        <GridContainer justify='center'>
+          <GridItem cs={12} sm={12} md={8}>
+            <h2 className={classes.title}>Request a course</h2>
+            <h4 className={classes.description}>
+              We would love to hear from you. Simply complete the form below or
+              email our team at Techno2powers@gmail.com
+            </h4>
+            <form>
+              <GridContainer>
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText={userName}
+                    id='name'
+                    formControlProps={{
+                      fullWidth: true,
+                    }}
+                  />
                 </GridItem>
+                <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText={userEmail}
+                    id='email'
+                    formControlProps={{
+                      fullWidth: true,
+                    }}
+                  />
+                </GridItem>
+                <CustomInput
+                  labelText='Your Message'
+                  id='message'
+                  formControlProps={{
+                    fullWidth: true,
+                    className: classes.textArea,
+                  }}
+                  inputProps={{
+                    multiline: true,
+                    rows: 5,
+                  }}
+                />
+                <NotificationContainer />
+                <GridContainer justify='center'>
+                  <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>
+                    {/* {showWarningMsg ? (<p>Please fill in the required fields</p>) : (null)} */}
+                    <Button color='primary' onClick={() => props.handelSubmit()}>
+                      Send
+                    </Button>
+                  </GridItem>
+                </GridContainer>
               </GridContainer>
-            </GridContainer>
-          </form>
-        </GridItem>
-      </GridContainer>
+            </form>
+          </GridItem>
+        </GridContainer>
+        </div>
     </div>
+    <Footer />
+</div>
   );
 }
-class WorkSection extends React.Component {
+class RequestCourse extends React.Component {
   render() {
     const styles = {
       zIndex: "10001 !important",
@@ -100,7 +128,7 @@ class WorkSection extends React.Component {
         <span style={styles}>
           <NotificationContainer />
         </span>
-        <WorkSectionContainer handelSubmit={this.handelSubmit} />,
+        <RequestCourseContainer handelSubmit={this.handelSubmit} />,
       </div>
     );
   }
@@ -150,4 +178,4 @@ class WorkSection extends React.Component {
   }
 }
 
-export default WorkSection;
+export default RequestCourse;
