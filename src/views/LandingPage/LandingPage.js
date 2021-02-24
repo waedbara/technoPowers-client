@@ -21,7 +21,8 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
-
+import ServiceSection from "./Sections/ServiceSection.js";
+import PartnerSection from "./Sections/PartnerSection.js"
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -71,6 +72,8 @@ export default function LandingPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+        <PartnerSection />
+          <ServiceSection />
           <ProductSection />
           <TeamSection />
           <WorkSection />
