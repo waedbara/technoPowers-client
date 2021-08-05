@@ -19,10 +19,10 @@ import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import Footer from "components/Footer/Footer.js";
-
+const internalApi = 'https://apitechno-powers.com/technoPowers-api/';
 const useStyles = makeStyles(styles);
 const axios = require("axios");
-const internalApi = "https://apitechno-powers.com/technoPoers-API";
+
 const dashboardRoutes = [];
 let userName =
   localStorage.getItem("username") && localStorage.getItem("username") != "null"

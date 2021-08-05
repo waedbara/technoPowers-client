@@ -30,7 +30,8 @@ import FacebookComponent from "../../components/FacebookComponent.js";
 const axios = require("axios");
 
 const useStyles = makeStyles(styles);
-const internalApi = "https://apitechno-powers.com/technoPoers-API/";
+const internalApi = 'https://apitechno-powers.com/technoPowers-api/';
+
 
 export function RegisterPageContainer(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
@@ -203,7 +204,6 @@ class Register extends React.Component {
         password: document.getElementById("pass").value,
         email: document.getElementById("email").value,
       });
-      console.log(response);
       if (response.data.status === 200) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("username", response.data.username);
