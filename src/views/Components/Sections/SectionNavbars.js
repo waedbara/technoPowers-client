@@ -19,7 +19,7 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import image from "assets/img/bg.jpg";
-import profileImage from "assets/img/faces/avatar.jpg";
+
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/navbarsStyle.js";
 
@@ -307,7 +307,7 @@ export default function SectionNavbars() {
                     dropdownHeader="Dropdown Header"
                     buttonText={
                       <img
-                        src={profileImage}
+                        // src={profileImage}
                         className={classes.img}
                         alt="profile"
                       />

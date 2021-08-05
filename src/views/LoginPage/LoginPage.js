@@ -32,7 +32,8 @@ import image from "assets/img/REG.jpg";
 const axios = require("axios");
 
 const useStyles = makeStyles(styles);
-const internalApi = "https://apitechno-powers.com/technoPoers-API/";
+const internalApi = 'https://apitechno-powers.com/technoPowers-api/';
+
 
 export function LoginPageContainer(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
@@ -46,7 +47,6 @@ export function LoginPageContainer(props) {
   }, 700);
   const classes = useStyles();
   const { ...rest } = props;
-
   return (
     <div>
       <Header
@@ -71,56 +71,9 @@ export function LoginPageContainer(props) {
                 <form className={classes.form}>
                   <CardHeader color='primary' className={classes.cardHeader}>
                     <h4>Login</h4>
-                    {/* <div className={classes.socialLine}> */}
-                    {/* <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-twitter"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-facebook"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-google-plus-g"} />
-                      </Button>
-                    </div> */}
                     <FacebookComponent />
                   </CardHeader>
-                  {/* <p className={classes.divider}>Or Be Classical</p> */}
                   <CardBody>
-                    {/* <CustomInput
-                      labelText="First Name..."
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                      value = {userInfo.username}
-                      onChange={(e) => setUserInfo({ username: e.target.value })}
-                    /> */}
                     <CustomInput
                       labelText='Email...'
                       id='email'
