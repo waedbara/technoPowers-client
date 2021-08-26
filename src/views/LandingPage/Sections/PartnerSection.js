@@ -55,6 +55,7 @@ export default function PartnerSection() {
               <h4 className={classes.labelRoot}>
               International Computer Driving Licence 
                 <br />
+                <a className={classes.aExam} href = "/exam">الإمتحان التجريبي </a>
               </h4>
             </Card>
           </GridItem>
@@ -65,8 +66,10 @@ export default function PartnerSection() {
               </GridItem>
               <br></br>
               <h4 className={classes.labelRoot}>
-                Internet Core Competency Certification
+                Internet Core Competency Certification 
                 <br />
+            
+
               </h4>
             </Card>
           </GridItem>
