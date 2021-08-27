@@ -59,6 +59,7 @@ class Exams extends React.Component {
         boxShadow:
           "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
          }}>
+        <div className="container">
         <main>
           <h2>ICDL الإمتحان التجريبي - الرخصة الدولية لقيادة الحاسوب</h2>
             {/* <!-- creating a modal for when quiz ends --> */}
@@ -70,9 +71,9 @@ class Exams extends React.Component {
     
                     <div className="grade-details">
                         
-                        <p>عدد الإجابات الخاطئة <span id="wrong-answers"></span></p>
-                        <p>عدد الإجابات الصحيحة <span id="right-answers"></span></p>
-                        <p>النتيجة<span id="grade-percentage"></span></p>
+                        <p> &nbsp;عدد الإجابات الخاطئة <span id="wrong-answers"></span></p>
+                        <p>&nbsp; عدد الإجابات الصحيحة <span id="right-answers"></span></p>
+                        <p> &nbsp;النتيجة <span id="grade-percentage"></span></p>
                         <p ><span id="remarks"></span></p>
                     </div>
     
@@ -136,14 +137,15 @@ class Exams extends React.Component {
     
                 </div>
     
-                <div className="next-button-container">
+                <div  className="next-button-container">
                     <button onClick={this.handleNextQuestion}>السؤال التالي</button>
                 </div>
     
             </div>
         </main>
       </div>
-      </div>)
+      </div>
+    </div>)
   }
   handleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
