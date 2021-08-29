@@ -74,6 +74,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  margin: 1rem;
 }
 
 .game-options-container span {
@@ -233,6 +234,7 @@ input[type="radio"]:checked ~ .option {
 
   .game-question-container {
     height: 6rem;
+    margin: 1rem;
   }
   .game-question-container h1 {
     font-size: 0.9rem;
@@ -281,6 +283,7 @@ input[type="radio"]:checked ~ .option {
 
   .game-question-container {
     height: 5rem;
+    margin: 1rem;
   }
 
   .game-question-container h1 {
@@ -305,7 +308,7 @@ input[type="radio"]:checked ~ .option {
     width: 90%;
     height: 3rem;
     margin-top: 7rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
   .title-quiz {
     font-size: 1.4rem;
@@ -315,6 +318,10 @@ input[type="radio"]:checked ~ .option {
   }
   .modal-button-container button {
     margin-left: 5rem;
+  }
+  .container {
+    max-width: 540px;
+    height: 700px;
   }
 }
 
