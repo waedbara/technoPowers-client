@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -60,8 +60,8 @@ class Exams extends React.Component {
           "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
          }}>
         <div className="container">
+            <h2 className="title-quiz" >ICDL الإمتحان التجريبي - الرخصة الدولية لقيادة الحاسوب</h2>
         <main>
-          <h2>ICDL الإمتحان التجريبي - الرخصة الدولية لقيادة الحاسوب</h2>
             {/* <!-- creating a modal for when quiz ends --> */}
             <div className="modal-container" id="score-modal">
     
@@ -95,13 +95,13 @@ class Exams extends React.Component {
                 <div className="game-question-container">
                     <h1 id="display-question"></h1>
                 </div>
-    
+
                 <div className="game-options-container">
     
                    <div className="modal-container" id="option-modal">
     
                         <div className="modal-content-container">
-                             <h1>الرجاء اختيار سؤال</h1>
+                             <h1>الرجاء إختر إجابة</h1>
     
                              <div className="modal-button-container">
                                 <button onClick={this.closeOptionModal}>المتابعة</button>
