@@ -16,7 +16,6 @@ body {
 main {
   width: 100%;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -27,12 +26,16 @@ main {
   background-size: cover;
   background-position: center;
 }
-
+.title-quiz {
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  min-height: 32px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 2rem;
+}
 .game-quiz-container {
-  /* width: 60rem;
-  height: 40rem; */
-  /* background-color: rgb(228, 186, 72); */
-  display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -41,10 +44,9 @@ main {
 
 .game-details-container {
   width: 100%;
-  height: 4rem;
-  display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
 }
 
 .game-details-container h1 {
@@ -52,23 +54,21 @@ main {
 }
 
 .game-question-container {
-  width: 80%;
-  height: 8rem;
-  display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  border: 4px solid rgb(5, 5, 5);
-  border-radius: 25px;
+  background-color: #e0e0e0;
 }
 
 .game-question-container h1 {
   font-size: 1.75rem;
   text-align: center;
-  padding: 3px;
+  padding: 20px;
+  color: rgb(3, 3, 3);
 }
 
 .game-options-container {
-  width: 80%;
+  width: 100%;
   height: 12rem;
   display: flex;
   flex-wrap: wrap;
@@ -80,8 +80,10 @@ main {
   width: 45%;
   height: 4.5rem;
   border: 2px solid rgb(8, 8, 8);
-  border-radius: 20px;
+  /* border-radius: 20px; */
   overflow: hidden;
+  text-align: center;
+  position: inherit;
 }
 span label {
   width: 100%;
@@ -113,13 +115,14 @@ input[type="radio"]:checked ~ .option {
 }
 
 .next-button-container {
-  width: 50%;
-  height: 3rem;
-  display: flex;
+  width: 100%;
+  height: 4rem;
   justify-content: center;
 }
 .next-button-container button {
-  background-color: #008cba;
+  background-color: rgb(245, 100, 87);
+  width: 30%;
+  height: 4rem;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -127,8 +130,9 @@ input[type="radio"]:checked ~ .option {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
+  margin-left: 25rem;
+  margin-top: 2rem;
 }
 .next-button-container button:hover {
   background-color: rgb(221, 127, 127);
@@ -187,7 +191,6 @@ input[type="radio"]:checked ~ .option {
 .modal-button-container {
   height: 2rem;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -202,6 +205,9 @@ input[type="radio"]:checked ~ .option {
   font-size: 1.1rem;
   cursor: pointer;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  margin-left: 7rem;
 }
 .modal-button-container button:hover {
   background-color: rgb(83, 82, 82);
@@ -247,9 +253,20 @@ input[type="radio"]:checked ~ .option {
   .modal-content-container h1 {
     font-size: 1.2rem;
   }
-  .next-button-container {
+  .next-button-container button {
     width: 90%;
-    height: 2rem;
+    height: 3rem;
+    margin-top: 7rem;
+    margin-left: 1rem;
+  }
+  .title-quiz {
+    font-size: 1.4rem;
+  }
+  span label {
+    font-size: 0.7rem;
+  }
+  .modal-button-container button {
+    margin-left: 5rem;
   }
 }
 
@@ -263,7 +280,7 @@ input[type="radio"]:checked ~ .option {
   }
 
   .game-question-container {
-    height: 8rem;
+    height: 5rem;
   }
 
   .game-question-container h1 {
@@ -271,7 +288,11 @@ input[type="radio"]:checked ~ .option {
   }
 
   .game-options-container span {
-    width: 90%;
+    width: 100%;
+    margin: 0.5rem;
+    border: 1px solid rgb(121 114 114);
+    height: 23%;
+    font-size: 0.1rem;
   }
   .modal-content-container {
     width: 90%;
@@ -280,10 +301,20 @@ input[type="radio"]:checked ~ .option {
   .modal-content-container h1 {
     font-size: 1.2rem;
   }
-  .next-button-container {
+  .next-button-container button {
     width: 90%;
-    height: 2rem;
-    margin-top: 8rem;
+    height: 3rem;
+    margin-top: 7rem;
+    margin-left: 1rem;
+  }
+  .title-quiz {
+    font-size: 1.4rem;
+  }
+  span label {
+    font-size: 0.7rem;
+  }
+  .modal-button-container button {
+    margin-left: 5rem;
   }
 }
 
@@ -296,6 +327,12 @@ input[type="radio"]:checked ~ .option {
   .container {
     max-width: 720px;
   }
+  .next-button-container button {
+    width: 90%;
+    height: 3rem;
+    margin-top: 7rem;
+    margin-left: 2rem;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -305,6 +342,12 @@ input[type="radio"]:checked ~ .option {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+  .next-button-container button {
+    width: 90%;
+    height: 3rem;
+    margin-top: 3rem;
+    margin-left: 2rem;
   }
 }
 @keyframes fadeIn {
