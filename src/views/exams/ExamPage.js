@@ -80,10 +80,8 @@ class Exams extends React.Component {
                         <p>&nbsp; عدد الإجابات الصحيحة <span id="right-answers"></span></p>
                         <p> &nbsp;النتيجة <span id="grade-percentage"></span></p>
                         <p ><span id="remarks"></span></p>
-                    </div>
-    
-                    <div className="modal-button-container">
-                        <button onClick={this.closeScoreModal}>متابعة</button>
+                        <button className="continuebtn" onClick={this.closeScoreModal}>متابعة</button>
+
                     </div>
     
                 </div>
