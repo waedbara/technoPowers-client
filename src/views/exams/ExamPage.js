@@ -7,6 +7,10 @@ import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import {questions} from "./questions.js";
+import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(styles);
 
 
 // const questions = useState();
@@ -17,10 +21,9 @@ let shuffledQuestions = [] //empty array to hold shuffled selected questions out
 
 
 class Exams extends React.Component {
-
+  
   constructor(props) {
     super(props);
-
     this.state = {
       questionNumber : this.state && this.state.questionNumber != 1 ? this.state.questionNumber : 1, //holds the current question number
       playerScore : this.state && this.state.playerScore ? this.state.playerScore : 0 , //holds the player score
@@ -36,6 +39,7 @@ class Exams extends React.Component {
   }
 
   render() {
+    const classes = this.props.classes;
     return (<div>
       <Header
         color='transparent'
@@ -56,12 +60,13 @@ class Exams extends React.Component {
        background: '#FFFFFF',
        margin: "-60px 30px 0px",
        borderRadius: "6px",
-      //  boxShadow:
-      //    "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+       boxShadow:
+         "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
         }}>
+        <div className={classes.section}>
         <div className="container">
             <h2 className="title-quiz" >ICDL الإمتحان التجريبي - الرخصة الدولية لقيادة الحاسوب</h2>
-        <main>
+           <main>
             {/* <!-- creating a modal for when quiz ends --> */}
             <div className="modal-container" id="score-modal">
     
@@ -141,11 +146,12 @@ class Exams extends React.Component {
                     <button onClick={this.handleNextQuestion}>السؤال التالي</button>
                 </div>
     
-            </div>
-        </main>
+              </div>
+          </main>
+        </div>
       </div>
-      </div>
-    </div>)
+    </div>
+  </div>)
   }
   handleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
@@ -162,7 +168,6 @@ class Exams extends React.Component {
   NextQuestion(index) {
     this.handleQuestions()
     const currentQuestion = shuffledQuestions[index] 
-    console.log(currentQuestion,"currentQuestion",this.state.questionNumber)
     // document.getElementById("question-number").innerHTML = this.state.questionNumber
     // document.getElementById("player-score").innerHTML = this.state.playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
@@ -184,7 +189,6 @@ class Exams extends React.Component {
               correctOption = option.labels[0].id
           }
       })
-
       //checking to make sure a radio input has been checked or an option being chosen
       if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
           document.getElementById('option-modal').style.display = "flex"
@@ -309,4 +313,9 @@ class Exams extends React.Component {
 }
 
 
-export default Exams;
+export default () => {
+  const classes = useStyles();
+  return (
+      <Exams classes={classes} />
+  )
+}
